@@ -7,7 +7,7 @@ import {UserOutlined, LockOutlined} from '@ant-design/icons';
 
 export default class Login extends Component {
     onFinish = async (values) => {
-        const {data} = await reqLogin(values);
+        const data = await reqLogin(values);
         if (data.status === 0) {
             //登录成功
             message.success("登录成功")
